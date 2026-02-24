@@ -3,6 +3,9 @@ print("------------------------------------------")
 customer_name = input("Enter customer name: ")
 print("\n------------------ ITEMS -----------------")
 
+import datetime
+now = datetime.datetime.now()
+
 basket = []
 grand_total = 0
 total_items = 0
@@ -36,6 +39,8 @@ print("\nTotal items purchased:",total_items)
 
 print("------------------------------------------")
 print("Customer name:", customer_name)
+print("Date:",now.strftime("%d-%m-%Y"))
+print("Time:",now.strftime("%H:%M:%S"))
 gst = grand_total * 0.18
 final_amount = grand_total + gst
 print("Subtotal: ₹",grand_total)
